@@ -1,4 +1,4 @@
-const calendarRepository = require('../repository/calendarRepository');
+import calendarRepository from '../repository/calendarRepository.js'
 
 class CalendarService {
 
@@ -166,4 +166,4 @@ class CalendarService {
     }
 }
 
-module.exports = new CalendarService();
+export default new CalendarService()

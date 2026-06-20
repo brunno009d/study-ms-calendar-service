@@ -1,4 +1,4 @@
-const calendarService = require('../service/calendarService');
+import calendarService from '../service/calendarService.js'
 
 class CalendarController {
 
@@ -135,5 +135,5 @@ class CalendarController {
     }
 }
 
-module.exports = new CalendarController();
+export default new CalendarController()
 

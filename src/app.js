@@ -1,7 +1,7 @@
-const express = require('express');
-const cors = require('cors');
-const calendarRoutes = require('./routes/calendarRoutes');
-const errorHandler = require('./middleware/errorHandler');
+import express from 'express'
+import cors from 'cors'
+import calendarRoutes from './routes/calendarRoutes.js'
+import errorHandler from './middleware/errorHandler.js'
 
 const app = express();
 
@@ -33,4 +33,4 @@ app.use((req, res) => {
 // Manejo de errores global
 app.use(errorHandler);
 
-module.exports = app;
+export default app

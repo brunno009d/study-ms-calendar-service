@@ -1,5 +1,5 @@
-const calendarService = require('../service/calendarService');
-const calendarRepository = require('../repository/calendarRepository');
+import calendarService from '../service/calendarService.js'
+import calendarRepository from '../repository/calendarRepository.js'
 
 /**
  * GET /ai-context
@@ -44,4 +44,4 @@ const getContext = async (req, res, next) => {
     }
 };
 
-module.exports = { getContext };
+export { getContext }
