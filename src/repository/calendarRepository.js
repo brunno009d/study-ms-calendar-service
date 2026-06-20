@@ -1,4 +1,4 @@
-const supabase = require('../config/supabase');
+import supabase from '../config/supabase.js'
 
 class CalendarRepository {
 
@@ -166,4 +166,4 @@ class CalendarRepository {
     }
 }
 
-module.exports = new CalendarRepository();
+export default new CalendarRepository()

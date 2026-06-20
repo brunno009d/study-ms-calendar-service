@@ -1,14 +1,15 @@
-const express = require('express');
-const router = express.Router();
-const calendarController = require('../controller/calendarController');
-const aiContextController = require('../controller/aiContextController');
-const requireAuth = require('../middleware/requireAuth');
+import express from 'express'
+import calendarController from '../controller/calendarController.js'
+import { getContext } from '../controller/aiContextController.js'
+import requireAuth from '../middleware/requireAuth.js'
+
+const router = express.Router()
 
 // Aplicar middleware de autenticación a TODAS las rutas
 router.use(requireAuth);
 
 // IA: Calendarios + eventos próximos 30 días (solo lectura)
-router.get('/ai-context', aiContextController.getContext);
+router.get('/ai-context', getContext);
 
 // CALENDARIOS 
 
@@ -45,4 +46,4 @@ router.delete('/events/:eventId', calendarController.deleteEvent);
 // Crea un recordatorio para un evento
 router.post('/events/:eventId/reminders', calendarController.createReminder);
 
-module.exports = router;
+export default router
